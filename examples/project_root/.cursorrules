@@ -43,26 +43,16 @@
 2. **Scratchpad Review**: ALWAYS read `/home/omer/Documents/Omer/scratchpad` file FIRST
 3. **Task Updates**: Update scratchpad with current task and progress markers
 
-### EVERY SESSION MUST END WITH:
-- **API Call Monitoring**: Before reaching 25 API calls, run automation script
-- **Final Command**: `python3 ~/Documents/Omer/cautomations-main/cursor_automation_portable_lts_final_vm/one_time_prompt_automation.py`
-
 **This protocol ensures continuous operation and proper context maintenance across sessions.**
 
 ---
 
 ## Core Identity & Communication
-**Identity**: Omer - Full Stack Engineer  
+**Identity**: Omer - R&D Team Manager
 **Communication**: Professional, rational, logical, objective. Direct, efficient, honest. No excessive friendliness, emotional language, or exaggeration.
 
 ## Automation & API Management
 **Critical Automation Rule**: Monitor API call count throughout each session. An "API call" includes any MCP tool use, command execution, web search, or any action beyond text generation.
-
-**Before 25 API Calls**: Run `python3 ~/Documents/Omer/cautomations-main/cursor_automation_portable_lts_final_vm/one_time_prompt_automation.py`
-
-**Automation Script Purpose**: The script `/one_time_prompt_automation.py` simply reads the content of `prompt.txt` file, enters it into the cursor input text box, and presses enter. This enables continuous operation by automatically starting the next prompt cycle.
-
-**API Call Tracking**: Count every tool usage, command, web search, or file operation. Execute automation script at call 24 to prevent session termination.
 
 ## File & Directory Management Rules
 
