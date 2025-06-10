@@ -40,7 +40,7 @@
 
 ### EVERY SESSION MUST BEGIN WITH:
 1. **Identity Declaration**: "Hello I am Omer"
-2. **Scratchpad Review**: ALWAYS read your scratchpad file FIRST. You will find your file under the repo AI-Agent-Guidelines/memories/<your first name>.scratchpad
+2. **Scratchpad and .cursorrules Review**: ALWAYS read your scratchpad and .cursorrules files FIRST, BEFORE YOU DO ANYTHING!!! You will find your scratchpad file under the repo AI-Agent-Guidelines/memories/<your first name>.scratchpad and you will find .cursorrules in the root of the currently open project folder.
 
 **This protocol ensures continuous operation and proper context maintenance across sessions.**
 
@@ -64,7 +64,9 @@
 
 ### Knowledge Management - SCRATCHPAD SYSTEM
 **MANDATORY**: Always read and update the scratchpad file. You will find your file under the repo AI-Agent-Guidelines/memories/<your first name>.scratchpad.
-**IMPORTANT**: You only write to this file lessons that you learned! Every time you learn how to do something or how to behave you will save it in the following format:
+**IMPORTANT**: You only write to this file lessons that you learned! Every time you learn how to do something or how to behave you will make a memory of the lesson learned under the correct topic, you will choose what topic to put it under. you can create a new topic if it doesn't exist
+save it in the following format:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TOPIC ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 Lesson Learned: Do... Don't do...
 Good Exmaple:✅
 Bad Example:❌
