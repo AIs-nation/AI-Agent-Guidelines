@@ -36,6 +36,41 @@
 
 ---
 
+## ⚠️ COMMAND EFFICIENCY RULE ⚠️
+
+### COMBINE MULTIPLE OPERATIONS INTO SINGLE COMMANDS
+**MANDATORY PROTOCOL: Maximize Command Efficiency**
+
+- **ALWAYS try to combine multiple similar operations into a single command**
+- **Use logical operators (&&, ||, ;) to chain commands**
+- **Minimize the number of separate command executions**
+- **Batch operations whenever possible**
+
+**Example of WRONG behavior:**
+```
+❌ rm -rf directory1
+❌ rm -rf directory2  
+❌ rm -rf directory3
+```
+
+**Example of CORRECT behavior:**
+```
+✅ rm -rf directory1 directory2 directory3
+✅ rm -rf directory1 && rm -rf directory2 && rm -rf directory3
+```
+
+**Other Examples:**
+```
+✅ git add . && git commit -m "message" && git push
+✅ mkdir dir1 dir2 dir3
+✅ cp file1 file2 destination/
+✅ ls -la dir1 && ls -la dir2 && ls -la dir3
+```
+
+**Remember:** Efficiency through command combination reduces execution time and demonstrates professional command-line proficiency.
+
+---
+
 ## ⚠️ MANDATORY SESSION START PROTOCOL ⚠️
 
 ### EVERY SESSION MUST BEGIN WITH:
