@@ -20,6 +20,15 @@ Lesson Learned: The most reliable method for clicking UI elements is template ma
 Good Example: ✅ Use cv2.matchTemplate() with a saved input_text_box.png template, check confidence threshold (0.6+), calculate center position from matched location, include fallback to coordinate-based clicking if template not found
 Bad Example: ❌ Only relying on coordinate-based clicking without visual verification of what's actually on screen
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TEMPLATE MATCHING RELIABILITY ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+Lesson Learned: Template matching for UI elements can be unreliable when the interface or environment changes. Coordinate-based clicking with multiple position testing is more robust for automation scripts.
+Good Example: ✅ Use coordinate-based clicking with multiple fallback positions (bottom center, slightly higher/lower, left/right sides) and test each position by typing/deleting to verify focus works
+Bad Example: ❌ Relying solely on template matching without coordinate-based fallbacks, especially when template images may not match current UI state
+
+Lesson Learned: When template matching fails with 0.000 confidence, it indicates the template image doesn't match current screen content at all - likely due to UI changes or different display environment.  
+Good Example: ✅ Template matching confidence 0.000 means complete mismatch - immediately switch to coordinate-based approach with multiple position testing
+Bad Example: ❌ Trying to adjust confidence thresholds when getting 0.000 confidence - this indicates fundamental template/screen mismatch, not threshold issues
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ERROR HANDLING ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 Lesson Learned: Always validate string splitting operations before unpacking to avoid "not enough values to unpack" errors. Add debugging output to see what the actual command output looks like.
 Good Example: ✅ Check len(parts) >= 2 before unpacking, add print statements to see actual output, use fallback values if parsing fails
@@ -1022,4 +1031,29 @@ Bad Example: ❌
 - Using AI systems without explainability and transparency features
 - Implementing AI without proper audit trails and governance documentation
 - Ignoring the business value and ROI of responsible AI practices
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SCREENSHOT CAPTURE SOLUTIONS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+Lesson Learned: gnome-screenshot is significantly more reliable than scrot for capturing actual screen content in Linux environments. scrot captures black screens while gnome-screenshot captures real content.
+Good Example: ✅ gnome-screenshot -f filename.png produces valid screenshots with actual content (mean intensity 28.89), while scrot produces black screens (mean intensity 0.00)
+Bad Example: ❌ Using only scrot without gnome-screenshot fallback leads to black screenshot captures that make template matching impossible
+
+Lesson Learned: When gnome-screenshot works properly, template matching achieves perfect confidence scores (1.000) indicating exact matches for UI elements.
+Good Example: ✅ Template matching confidence 1.000 with gnome-screenshot means UI element detection is working perfectly
+Bad Example: ❌ Template matching confidence 0.000 with scrot indicates screenshot capture failure, not template matching failure
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ DEVELOPMENT ENVIRONMENT SETUP ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Lesson Learned: When setting up development environment for LMS projects, install essential tools in the correct order and handle dependency conflicts appropriately. For Python in externally-managed environments, use virtual environments instead of system-wide installation.
+Good Example: ✅ 
+1. Install system packages: tmux, nodejs, npm, git, curl, build-essential using apt
+2. Install frontend dependencies with --legacy-peer-deps to handle Next.js version conflicts  
+3. Create tmux sessions for lms_frontend, lms_backend, flexible workspaces
+4. Use Python virtual environments for Python packages instead of system-wide pip install
+Bad Example: ❌ 
+- Installing Python packages system-wide with pip3 in externally-managed environment
+- Not handling peer dependency conflicts in npm installations
+- Forgetting to create required tmux sessions for project workflow
+
+Lesson Learned: Essential development tools for AI-Powered LMS project include Node.js 18.19.1, npm 9.2.0, tmux 3.4, git 2.43.0, Python 3.12.3, and proper tmux session management.
+Good Example: ✅ Successfully installed: tmux 3.4, Node.js v18.19.1, npm 9.2.0, git 2.43.0, Python 3.12.3, created tmux sessions (lms_frontend, lms_backend, flexible)
+Bad Example: ❌ Missing essential tools or incorrect versions that don't support project requirements
 
