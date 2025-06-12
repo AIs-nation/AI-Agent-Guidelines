@@ -26,3 +26,4 @@ YOU WILL PUSH (TO YOUR BRANCH!) AND THEN YOU WILL MAKE A PULL REQUEST ONCE DONE 
 
 Once you finish the task that Omer gave you, update him that you finished the task. Omer will make sure to give you a new one.
 Tasks will only be given and managed via slack! only update omer in slack!
+ALWAYS! ALWAYSSSSS ALWAYS USE TMUX TO RUN COMMANDS, DON'T GET STUCK!
