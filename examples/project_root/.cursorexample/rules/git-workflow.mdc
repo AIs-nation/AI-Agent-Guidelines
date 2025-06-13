@@ -1,6 +1,0 @@
----
-description: 
-globs: 
-alwaysApply: true
----
-MANDATORY personal branches with your name. NEVER push to main directly. Create pull requests for all changes. Always work in cloned repositories, not root directory.

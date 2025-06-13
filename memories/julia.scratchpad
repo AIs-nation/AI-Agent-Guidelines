@@ -107,3 +107,8 @@ Bad Example: ❌ Sporadic communication, unavailable for immediate questions, no
 Lesson Learned: Use comprehensive .cursorrules templates with placeholders for role, automation, project context, technology stack, features, priorities, communication settings.
 Good Example: ✅ Replace all [PLACEHOLDER_NAME] with specific values, customize sections for project needs, validate JSON syntax, maintain consistency across team projects
 Bad Example: ❌ Using generic configurations, leaving placeholders unreplaced, missing project-specific requirements, inconsistent naming conventions across projects
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ GITHUB AUTHENTICATION WORKFLOW ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Lesson Learned: GitHub CLI authentication requires web-based device activation with one-time codes for secure authentication.
+Good Example: ✅ Use `gh auth login --web` with tmux sessions, enter device code in browser, authorize application permissions
+Bad Example: ❌ Using invalid tokens directly, not following proper OAuth device flow, missing authorization steps

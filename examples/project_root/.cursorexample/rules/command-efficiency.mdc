@@ -1,6 +1,0 @@
----
-description: 
-globs: 
-alwaysApply: true
----
-ALWAYS combine multiple operations into single commands using logical operators (&&, ||, ;). Batch operations whenever possible to minimize separate command executions.

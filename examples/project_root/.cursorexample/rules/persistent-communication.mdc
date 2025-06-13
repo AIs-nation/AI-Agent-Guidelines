@@ -1,6 +1,0 @@
----
-description: 
-globs: 
-alwaysApply: true
----
-Every AI must keep sending messages when no response is received but one is needed. Never stop communication when waiting for required input.
