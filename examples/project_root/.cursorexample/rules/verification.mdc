@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+NEVER claim completion without verification. Test functionality, read source files, check endpoints. Use "COMPLETE" only after 100% verification through actual testing.

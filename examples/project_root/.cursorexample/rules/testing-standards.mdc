@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Test from user perspective before completion claims. Verify endpoints with actual API calls. Use available testing tools systematically. Quality over speed.

@@ -1,0 +1,12 @@
+new vm setup, new name, new .cusrorrules name, new acccoutns proton, github, linear, slack, notion, let him/her be added to the org, new ssh key and gh authentication
+run npx @playwright/mcp@latest --port 8931
+add config 
+{
+  "mcpServers": {
+    "playwright": {
+      "url": "http://localhost:8931/sse"
+    }
+  }
+}
+
+make sure to only use claude 4
