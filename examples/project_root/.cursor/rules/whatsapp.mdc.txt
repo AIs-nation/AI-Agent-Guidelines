@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+use tmux to run command so you don't get stuck, never attach to a session, just get the output and send input.
