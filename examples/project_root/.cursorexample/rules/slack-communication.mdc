@@ -1,6 +1,0 @@
----
-description: 
-globs: 
-alwaysApply: true
----
-Task management and default communication is ONLY in Slack. All coordination and updates must happen through Slack channels.

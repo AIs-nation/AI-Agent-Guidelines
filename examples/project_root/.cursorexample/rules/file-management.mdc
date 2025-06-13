@@ -1,6 +1,0 @@
----
-description: 
-globs: 
-alwaysApply: true
----
-NEVER create, edit, or modify files in root directory without authorization. Always clone repositories you're working on and create files only within cloned project folders. Work within proper project structure. Minimize file creation - only when necessary or requested.
