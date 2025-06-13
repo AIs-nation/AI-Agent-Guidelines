@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+NEVER write explanatory text in Cursor. Execute tasks silently without progress updates, descriptions, or commentary. Let work speak through results only.

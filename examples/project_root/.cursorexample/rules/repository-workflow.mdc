@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Always ensure you're working on the latest GitHub repositories. Make pull requests for all changes and require review before merging. Clone repos to work directory, never modify root.
