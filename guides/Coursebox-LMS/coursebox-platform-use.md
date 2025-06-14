@@ -93,7 +93,43 @@ This document provides automation procedures for AI agents working with the Cour
    - Positioned in course action buttons area, usually at bottom of course information
 3. Click "Editor" button to open course content editor
 
-### Text Editor RTL Alignment Procedure
+### Course Section Navigation
+1. **URL Pattern for Sections**: `https://course.easycyber.com/#/courses/[COURSE_ID]/activities/[SECTION_ID]/course_view/edit`
+2. **Section Navigation Methods**:
+   - Use sidebar navigation to click on specific sections
+   - Navigate directly using section URLs if section IDs are known
+   - Use topic expansion to access subsections within topics
+
+### Text Editor RTL Alignment Procedure (RECOMMENDED METHOD)
+
+#### Step 1: Access Text Editor
+1. In course editor interface, locate main text editor by:
+   - Look for large textbox/editor area containing course content
+   - Usually the main content area with toolbar above it
+   - Contains Hebrew text content
+   - **Important**: Only align the FIRST/MAIN text editor in each section
+2. Click on text editor to focus
+
+#### Step 2: Select All Text
+1. Use `Ctrl+A` to select all text in the editor
+2. Verify text is highlighted/selected
+
+#### Step 3: Apply RTL Alignment (KEYBOARD METHOD - PREFERRED)
+1. **RECOMMENDED**: Use keyboard shortcut `Ctrl+Shift+R`
+   - This is the most reliable and efficient method
+   - Works consistently across all text editors
+   - No need to navigate toolbar menus
+   - Faster execution for batch operations
+2. Verify Hebrew text is now properly right-aligned (RTL)
+
+#### Step 4: Verification
+1. Check that Hebrew text aligns to the right side of the editor
+2. Ensure text displays properly in RTL format
+3. Move to next section if alignment is successful
+
+### Text Editor RTL Alignment Procedure (ALTERNATIVE TOOLBAR METHOD)
+
+**Use this method only if keyboard shortcut fails**
 
 #### Step 1: Access Text Editor
 1. In course editor interface, locate main text editor by:
@@ -106,7 +142,7 @@ This document provides automation procedures for AI agents working with the Cour
 1. Use `Ctrl+A` to select all text in the editor
 2. Verify text is highlighted/selected
 
-#### Step 3: Apply RTL Alignment
+#### Step 3: Apply RTL Alignment (TOOLBAR METHOD)
 1. Locate alignment button in toolbar by:
    - **Visual Pattern**: Look for alignment icon (usually lines with different alignments ≡)
    - **Toolbar Section**: Located in formatting toolbar above text editor
@@ -120,13 +156,40 @@ This document provides automation procedures for AI agents working with the Cour
 4. Click the THIRD alignment button in the submenu (top row, third from left)
 5. Verify Hebrew text is now properly right-aligned (RTL)
 
-#### RTL Alignment Notes
-- **Critical**: Must use the THIRD alignment button in the submenu for proper Hebrew RTL display
-- **Button Position**: Top row, third from left (after left align and center align)
-- **Verification**: Hebrew text should align to right side of editor and display properly
-- **Purpose**: Essential for proper Hebrew text display and readability
-- **Submenu Required**: Must click main alignment button first to reveal alignment options
-- **Do NOT use**: Left align, center align, or justify - only the third button provides correct RTL
+### Interactive Component RTL Alignment
+
+#### Component Types Requiring RTL Alignment
+1. **Flip Cards**: Each card textbox needs individual RTL alignment
+2. **Info Tabs**: Each tab textbox needs individual RTL alignment  
+3. **Accordion Sections**: Each accordion textbox needs individual RTL alignment
+4. **Main Text Editors**: Primary content areas in each section
+
+#### Component Alignment Procedure
+1. **For Flip Cards**:
+   - Click on each flip card textbox individually
+   - Apply `Ctrl+A` to select all text
+   - Apply `Ctrl+Shift+R` for RTL alignment
+   - Repeat for each card in the component
+
+2. **For Info Tabs**:
+   - Click on each tab textbox individually
+   - Apply `Ctrl+A` to select all text
+   - Apply `Ctrl+Shift+R` for RTL alignment
+   - Repeat for each tab in the component
+
+3. **For Accordion Sections**:
+   - Click on each accordion textbox individually
+   - Apply `Ctrl+A` to select all text
+   - Apply `Ctrl+Shift+R` for RTL alignment
+   - Repeat for each accordion section in the component
+
+### RTL Alignment Best Practices
+- **ALWAYS use keyboard shortcut `Ctrl+Shift+R` as primary method**
+- **Only align text editors/textboxes - do not align interactive games or assessments**
+- **Focus on main content areas first, then interactive components**
+- **Take screenshots to verify alignment before proceeding if uncertain**
+- **Process sections systematically to avoid missing any content**
+- **Wait for page loading between section navigation**
 
 ## Element Identification Strategies
 
@@ -151,7 +214,7 @@ This document provides automation procedures for AI agents working with the Cour
 - **Save Button**: Bottom of forms, usually primary button
 - **Editor Button**: Bottom of course information section
 - **Alignment Button**: In formatting toolbar above text editor
-- **RTL Alignment**: Third button in alignment submenu (top row)
+- **RTL Alignment**: Third button in alignment submenu (top row) - OR use `Ctrl+Shift+R`
 
 #### By HTML Attributes
 - **Email Field**: placeholder containing "email" or name attribute
@@ -180,6 +243,7 @@ This document provides automation procedures for AI agents working with the Cour
 - Fall back to position-based identification if text fails
 - Take snapshots when elements cannot be located
 - Verify successful actions before proceeding
+- **For RTL alignment**: Take screenshot first to check if already aligned
 
 ### Course Processing Workflow
 1. Login to platform using text-based element identification
@@ -194,22 +258,32 @@ This document provides automation procedures for AI agents working with the Cour
    - Click "Save" button (bottom of form)
    - Verify update success
 
-### Text Editor RTL Workflow
+### Text Editor RTL Workflow (UPDATED)
 1. Access course page
 2. Find and click "Editor" button (bottom of course info)
-3. Find and click main text editor (large content area)
-4. Select all text (`Ctrl+A`)
-5. Find alignment button in toolbar (alignment icon)
-6. Click alignment button to open submenu
-7. **CRITICAL**: Find and click the THIRD alignment button in the top row of submenu
-8. Verify RTL alignment applied correctly
+3. Navigate to first section (ensure starting from beginning)
+4. For each section:
+   - Wait for page to load completely
+   - Take screenshot to verify current alignment status
+   - If not aligned:
+     - Find and click main text editor (large content area)
+     - Select all text (`Ctrl+A`)
+     - **Apply RTL alignment using `Ctrl+Shift+R`** (PREFERRED METHOD)
+     - Verify RTL alignment applied correctly
+   - For interactive components (flip cards, info tabs, accordions):
+     - Click each individual textbox
+     - Apply `Ctrl+A` then `Ctrl+Shift+R`
+     - Repeat for all textboxes in component
+   - Navigate to next section
+5. Continue until all sections processed
 
 ### Batch Operations
 - Process courses sequentially to avoid session issues
 - Return to course list between edits using navigation
 - Verify each change before proceeding to next course
 - For text alignment: Apply to all courses requiring Hebrew RTL display
-- Use consistent button positioning (third alignment button) for all RTL operations
+- **Use keyboard shortcut `Ctrl+Shift+R` for consistent RTL operations**
+- **Take screenshots to verify alignment status before attempting changes**
 
 ## Platform-Specific Notes
 
@@ -218,15 +292,15 @@ This document provides automation procedures for AI agents working with the Cour
 - Settings menu appears as dropdown after icon click
 - Edit mode replaces course display with form interface
 - Save action returns to course information view
-- Alignment submenu requires clicking alignment button first
+- **Keyboard shortcuts work more reliably than toolbar buttons**
 - RTL alignment essential for Hebrew text readability
-- Alignment submenu structure: 4 buttons in top row, 2 in bottom row
+- **Page loading time varies - always wait for complete loading**
 
 ### Element Stability Patterns
 - **Settings Icon**: Consistently positioned between "Unpublish" and "AI Tutor"
 - **Course Title**: Always first major textbox in edit mode
 - **Editor Button**: Always at bottom of course information section
-- **Alignment Options**: Submenu structure consistent - third button in top row is RIGHT ALIGN
+- **Keyboard Shortcuts**: `Ctrl+Shift+R` works consistently across all text editors
 - **Save Buttons**: Always at bottom of forms
 - **Navigation Menu**: Always in left sidebar
 
@@ -243,9 +317,10 @@ This document provides automation procedures for AI agents working with the Cour
 - Logout occurs automatically after extended inactivity
 - Re-login required if session expires during batch operations
 
-### RTL Alignment Best Practices
-- Always use the third alignment button in submenu for Hebrew RTL
-- Verify text alignment visually after applying
-- Apply RTL to all Hebrew content sections
-- Test alignment on different content types (headings, paragraphs, lists)
-- Maintain consistent RTL formatting across all course sections
+### RTL Alignment Best Practices (UPDATED)
+- **PRIMARY METHOD**: Always use `Ctrl+Shift+R` keyboard shortcut for Hebrew RTL
+- **VERIFICATION**: Take screenshots to check alignment status before making changes
+- **SCOPE**: Apply RTL to all Hebrew content sections (main text + interactive components)
+- **EFFICIENCY**: Keyboard method is faster and more reliable than toolbar navigation
+- **CONSISTENCY**: Use same method across all content types for uniform results
+- **FOCUS**: Only align text editors/textboxes - skip games and non-text content
