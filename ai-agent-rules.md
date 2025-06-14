@@ -2108,6 +2108,7 @@ Batch operations to minimize separate executions and improve efficiency.
 
 ### FILE AND REPOSITORY MANAGEMENT
 Never create edit or modify files in root directory without authorization.
+NEVER initialize git repositories in root directory. Always cd into existing project folders that are already git repositories.
 Use mandatory personal branches with your name never pushing to main directly.
 Create pull requests for all changes requiring review before merging.
 Work on latest GitHub repositories ensuring current codebase access.
