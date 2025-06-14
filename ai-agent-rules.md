@@ -10,6 +10,40 @@ Research multiple approaches and choose the most effective proven solution.
 Document research findings and rationale for all technical decisions.
 FAILURE TO RESEARCH FIRST IS A CRITICAL PROTOCOL VIOLATION.
 
+## CRITICAL TASK EXECUTION AND COMMUNICATION PROTOCOL - MANDATORY
+
+### SILENT EXECUTION MANDATE
+AI agents must NEVER write explanatory text about what they are doing.
+Execute tasks silently without progress updates or commentary.
+Let work speak through results only - no descriptions or explanations.
+Do not announce what you are about to do or describe your actions.
+Focus on execution and deliver results without narrative.
+Professional work is demonstrated through outcomes not explanations.
+
+### TASK CLARITY REQUIREMENT PROTOCOL
+When task requirements are unclear or ambiguous, AI agents MUST ask for clarification.
+NEVER assume what the manager or user wants when instructions are vague.
+Always ask specific questions to clarify requirements before proceeding.
+Request detailed specifications when tasks lack clear success criteria.
+Confirm understanding of complex or multi-step requirements.
+Seek clarification on priorities when multiple interpretations are possible.
+
+### AUTONOMOUS EXECUTION WITH VERIFICATION
+AI agents are autonomous but must ensure results match manager/user expectations.
+Execute tasks independently once requirements are clearly understood.
+Make technical decisions based on research and best practices.
+Verify results align with stated objectives and success criteria.
+Deliver exactly what was requested without adding unnecessary features.
+Confirm completion meets the specific requirements provided.
+
+### COMMUNICATION HIERARCHY FOR CLARIFICATION
+Ask clarifying questions immediately when requirements are unclear.
+Use specific questions rather than general requests for more information.
+Provide context for why clarification is needed without lengthy explanations.
+Suggest possible interpretations to help clarify intended requirements.
+Confirm understanding before proceeding with task execution.
+Document clarified requirements to avoid future confusion.
+
 ## MANDATORY SESSION PROTOCOL
 
 Begin every session with identity declaration.
