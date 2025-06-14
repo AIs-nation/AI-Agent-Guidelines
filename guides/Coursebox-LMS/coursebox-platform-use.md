@@ -122,10 +122,29 @@ This document provides automation procedures for AI agents working with the Cour
    - Faster execution for batch operations
 2. Verify Hebrew text is now properly right-aligned (RTL)
 
-#### Step 4: Verification
+#### Step 4: **CRITICAL - SAVE CHANGES**
+**YOU MUST SAVE AFTER EVERY RTL ALIGNMENT OR CHANGES WILL BE LOST**
+
+1. **Locate Save Button by CSS Class**:
+   - Look for button with class `"fas fa-floppy-o cus-icon"`
+   - This is the floppy disk save icon in the top toolbar
+   - **Position**: Located in the top right button group (second button from left to right)
+   - **Visual**: Appears as a floppy disk icon
+
+2. **Click Save Button**:
+   - Click the button with class `"fas fa-floppy-o cus-icon"`
+   - Wait for save confirmation (usually shows "Activity successfully updated" message)
+   - **CRITICAL**: Without saving, all RTL alignment changes will be lost when navigating to next section
+
+3. **Verification**:
+   - Look for success message indicating save completed
+   - Ensure changes are preserved before moving to next section
+
+#### Step 5: Verification
 1. Check that Hebrew text aligns to the right side of the editor
 2. Ensure text displays properly in RTL format
-3. Move to next section if alignment is successful
+3. **Verify save was successful before proceeding**
+4. Move to next section only after confirming save
 
 ### Text Editor RTL Alignment Procedure (ALTERNATIVE TOOLBAR METHOD)
 
@@ -156,6 +175,13 @@ This document provides automation procedures for AI agents working with the Cour
 4. Click the THIRD alignment button in the submenu (top row, third from left)
 5. Verify Hebrew text is now properly right-aligned (RTL)
 
+#### Step 4: **CRITICAL - SAVE CHANGES (SAME AS ABOVE)**
+**YOU MUST SAVE AFTER EVERY RTL ALIGNMENT OR CHANGES WILL BE LOST**
+
+1. **Locate Save Button by CSS Class**: `"fas fa-floppy-o cus-icon"`
+2. **Click Save Button** and wait for confirmation
+3. **Verify save success** before proceeding
+
 ### Interactive Component RTL Alignment
 
 #### Component Types Requiring RTL Alignment
@@ -169,54 +195,79 @@ This document provides automation procedures for AI agents working with the Cour
    - Click on each flip card textbox individually
    - Apply `Ctrl+A` to select all text
    - Apply `Ctrl+Shift+R` for RTL alignment
+   - **SAVE using class `"fas fa-floppy-o cus-icon"` button**
    - Repeat for each card in the component
 
 2. **For Info Tabs**:
    - Click on each tab textbox individually
    - Apply `Ctrl+A` to select all text
    - Apply `Ctrl+Shift+R` for RTL alignment
+   - **SAVE using class `"fas fa-floppy-o cus-icon"` button**
    - Repeat for each tab in the component
 
 3. **For Accordion Sections**:
    - Click on each accordion textbox individually
    - Apply `Ctrl+A` to select all text
    - Apply `Ctrl+Shift+R` for RTL alignment
+   - **SAVE using class `"fas fa-floppy-o cus-icon"` button**
    - Repeat for each accordion section in the component
 
 ### RTL Alignment Best Practices
 - **ALWAYS use keyboard shortcut `Ctrl+Shift+R` as primary method**
+- **ALWAYS SAVE after each alignment using class `"fas fa-floppy-o cus-icon"` button**
 - **Only align text editors/textboxes - do not align interactive games or assessments**
 - **Focus on main content areas first, then interactive components**
 - **Take screenshots to verify alignment before proceeding if uncertain**
 - **Process sections systematically to avoid missing any content**
 - **Wait for page loading between section navigation**
+- **Verify save confirmation before moving to next section**
 
 ## Element Identification Strategies
 
+### Primary Identification Method: CSS Classes and IDs
+
+#### Critical Save Button
+- **CSS Class**: `"fas fa-floppy-o cus-icon"`
+- **Description**: Floppy disk save icon
+- **Location**: Top right button group (second from left to right)
+- **Usage**: MUST click after every RTL alignment to save changes
+
+#### Other Important Elements (To Be Updated)
+- **Text Editors**: Look for elements with `role="textbox"` or `contenteditable="true"`
+- **Buttons**: Identify by specific CSS classes when available
+- **Navigation**: Use class-based identification for consistent targeting
+
 ### Reliable Identification Methods
 
-#### By Text Content
+#### By CSS Classes and IDs (PRIMARY METHOD)
+- **Save Button**: class `"fas fa-floppy-o cus-icon"`
+- **Text Editors**: Look for `contenteditable="true"` or `role="textbox"`
+- **Buttons**: Identify by specific CSS classes when provided
+- **Navigation Elements**: Use class-based selectors for consistency
+
+#### By Text Content (FALLBACK)
 - **Login Elements**: "email", "password", "Next", "Log in"
 - **Navigation**: "Courses", "Dashboard", "All"
 - **Course Actions**: "Edit", "Save", "Editor", "Unpublish", "AI Tutor"
 - **Alignment**: Look for alignment symbols or "Right align" text
 
-#### By Visual Patterns
+#### By Visual Patterns (FALLBACK)
 - **Settings Icon**: Gear (⚙️) or three dots (⋯) symbol
 - **Alignment Button**: Lines with different alignments (≡)
 - **Right Align**: Lines aligned to right side (⋯)
+- **Save Icon**: Floppy disk icon
 
-#### By Position Patterns
+#### By Position Patterns (FALLBACK)
 - **Settings Icon**: ALWAYS between "Unpublish" and "AI Tutor" buttons
+- **Save Button**: Top right button group, second from left to right
 - **Email Field**: First input field on login page
 - **Password Field**: Appears after clicking Next
 - **Course Title**: First/main textbox in edit form
-- **Save Button**: Bottom of forms, usually primary button
 - **Editor Button**: Bottom of course information section
 - **Alignment Button**: In formatting toolbar above text editor
 - **RTL Alignment**: Third button in alignment submenu (top row) - OR use `Ctrl+Shift+R`
 
-#### By HTML Attributes
+#### By HTML Attributes (FALLBACK)
 - **Email Field**: placeholder containing "email" or name attribute
 - **Password Field**: type="password"
 - **Course Title**: name="Insert a title..." or similar
@@ -226,9 +277,11 @@ This document provides automation procedures for AI agents working with the Cour
 
 #### If Element Not Found by Primary Method
 1. **Take Snapshot**: Use browser snapshot to see current page state
-2. **Search by Similar Text**: Look for partial matches or translations
-3. **Search by Position**: Look in expected UI areas (toolbars, forms, navigation)
-4. **Search by Element Type**: Find all buttons/textboxes and filter by context
+2. **Search by CSS Classes**: Look for similar class patterns
+3. **Search by IDs**: Check for element IDs if classes unavailable
+4. **Search by Similar Text**: Look for partial matches or translations
+5. **Search by Position**: Look in expected UI areas (toolbars, forms, navigation)
+6. **Search by Element Type**: Find all buttons/textboxes and filter by context
 
 #### Navigation Fallbacks
 - **Direct URL**: Use direct navigation when UI navigation fails
@@ -239,11 +292,12 @@ This document provides automation procedures for AI agents working with the Cour
 
 ### Error Handling
 - Always verify page state before attempting actions
-- Use text-based identification as primary method
-- Fall back to position-based identification if text fails
+- Use CSS class/ID identification as primary method
+- Fall back to text-based identification if classes fail
 - Take snapshots when elements cannot be located
 - Verify successful actions before proceeding
 - **For RTL alignment**: Take screenshot first to check if already aligned
+- **Always verify save success before proceeding to next section**
 
 ### Course Processing Workflow
 1. Login to platform using text-based element identification
@@ -258,7 +312,7 @@ This document provides automation procedures for AI agents working with the Cour
    - Click "Save" button (bottom of form)
    - Verify update success
 
-### Text Editor RTL Workflow (UPDATED)
+### Text Editor RTL Workflow (UPDATED WITH SAVE REQUIREMENT)
 1. Access course page
 2. Find and click "Editor" button (bottom of course info)
 3. Navigate to first section (ensure starting from beginning)
@@ -269,12 +323,15 @@ This document provides automation procedures for AI agents working with the Cour
      - Find and click main text editor (large content area)
      - Select all text (`Ctrl+A`)
      - **Apply RTL alignment using `Ctrl+Shift+R`** (PREFERRED METHOD)
+     - **CRITICAL: Click save button with class `"fas fa-floppy-o cus-icon"`**
+     - **Wait for save confirmation before proceeding**
      - Verify RTL alignment applied correctly
    - For interactive components (flip cards, info tabs, accordions):
      - Click each individual textbox
      - Apply `Ctrl+A` then `Ctrl+Shift+R`
+     - **SAVE using class `"fas fa-floppy-o cus-icon"` button after each component**
      - Repeat for all textboxes in component
-   - Navigate to next section
+   - Navigate to next section only after confirming all saves completed
 5. Continue until all sections processed
 
 ### Batch Operations
@@ -283,7 +340,9 @@ This document provides automation procedures for AI agents working with the Cour
 - Verify each change before proceeding to next course
 - For text alignment: Apply to all courses requiring Hebrew RTL display
 - **Use keyboard shortcut `Ctrl+Shift+R` for consistent RTL operations**
+- **ALWAYS save using class `"fas fa-floppy-o cus-icon"` after each alignment**
 - **Take screenshots to verify alignment status before attempting changes**
+- **Verify save confirmation before moving between sections**
 
 ## Platform-Specific Notes
 
@@ -295,13 +354,15 @@ This document provides automation procedures for AI agents working with the Cour
 - **Keyboard shortcuts work more reliably than toolbar buttons**
 - RTL alignment essential for Hebrew text readability
 - **Page loading time varies - always wait for complete loading**
+- **SAVE BUTTON MUST BE CLICKED AFTER EVERY RTL ALIGNMENT**
 
 ### Element Stability Patterns
+- **Save Button**: Consistently identified by class `"fas fa-floppy-o cus-icon"`
 - **Settings Icon**: Consistently positioned between "Unpublish" and "AI Tutor"
 - **Course Title**: Always first major textbox in edit mode
 - **Editor Button**: Always at bottom of course information section
 - **Keyboard Shortcuts**: `Ctrl+Shift+R` works consistently across all text editors
-- **Save Buttons**: Always at bottom of forms
+- **Save Buttons**: Always at bottom of forms (for course settings) or top toolbar (for content editing)
 - **Navigation Menu**: Always in left sidebar
 
 ### Language Considerations
@@ -317,10 +378,13 @@ This document provides automation procedures for AI agents working with the Cour
 - Logout occurs automatically after extended inactivity
 - Re-login required if session expires during batch operations
 
-### RTL Alignment Best Practices (UPDATED)
+### RTL Alignment Best Practices (UPDATED WITH SAVE REQUIREMENT)
 - **PRIMARY METHOD**: Always use `Ctrl+Shift+R` keyboard shortcut for Hebrew RTL
+- **CRITICAL SAVE STEP**: Always click save button with class `"fas fa-floppy-o cus-icon"` after alignment
 - **VERIFICATION**: Take screenshots to check alignment status before making changes
 - **SCOPE**: Apply RTL to all Hebrew content sections (main text + interactive components)
 - **EFFICIENCY**: Keyboard method is faster and more reliable than toolbar navigation
 - **CONSISTENCY**: Use same method across all content types for uniform results
 - **FOCUS**: Only align text editors/textboxes - skip games and non-text content
+- **SAVE CONFIRMATION**: Wait for "Activity successfully updated" message before proceeding
+- **ELEMENT IDENTIFICATION**: Use CSS classes and IDs as primary identification method
