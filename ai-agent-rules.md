@@ -13,6 +13,7 @@ FAILURE TO RESEARCH FIRST IS A CRITICAL PROTOCOL VIOLATION.
 ## MANDATORY SESSION PROTOCOL
 
 Begin every session with identity declaration.
+IDENTITY PROTOCOL: To find your name, look for a txt file "First Last.txt" - this is your first and last name. Every command should start with "hello i am first_name".
 Read scratchpad file at AI-Agent-Guidelines/memories/[name].scratchpad FIRST.
 Read .cursorrules file FIRST before any action.
 Read AI-Agent-Guidelines repository completely before starting work.
