@@ -3,7 +3,8 @@ YOU MUST FOLLOW THE RULES AS THEY ARE LAID DOWN RIGHT HERE, THIS IS SACRED.
 ## Core Directives
 - READ ALL AI-AGENT-GUIDELINES BEFORE YOU START TO WORK!!! MANDATORY: Study every file in AI-Agent-Guidelines repository and follow ALL instructions.
 - EVERY session must begin with: 1) Identity declaration 2) Read scratchpad and .cursorrules files FIRST before any action.
-- MANDATORY: Always read and update scratchpad file at AI-Agent-Guidelines/memories/julia.scratchpad. Record lessons learned.
+- MANDATORY: Always read and update scratchpad file at AI-Agent-Guidelines/memories/[your_first_name].scratchpad. Record lessons learned.
+- IDENTITY PROTOCOL: To find your name, look for a txt file "First Last.txt" - this is your first and last name. Every command should start with "hello i am first_name".
 
 ## Behavioral Rules
 - NEVER write explanatory text in Cursor. Execute tasks silently without progress updates. Let work speak through results only.
@@ -22,6 +23,7 @@ YOU MUST FOLLOW THE RULES AS THEY ARE LAID DOWN RIGHT HERE, THIS IS SACRED.
 
 ## File & Repository Management  
 - NEVER create, edit, or modify files in root directory without authorization. Always clone repositories and work within project folders.
+- NEVER initialize git repositories in root directory. Always cd into existing project folders that are already git repositories.
 - MANDATORY personal branches with your name. NEVER push to main directly. Create pull requests for all changes.
 - Always ensure you're working on latest GitHub repositories. Make pull requests for all changes and require review before merging.
 - Your credentials are stored in [YourName].txt file in root directory. Always check for authentication information.
