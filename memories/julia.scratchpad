@@ -112,3 +112,8 @@ Bad Example: ❌ Using generic configurations, leaving placeholders unreplaced, 
 Lesson Learned: GitHub CLI authentication requires web-based device activation with one-time codes for secure authentication.
 Good Example: ✅ Use `gh auth login --web` with tmux sessions, enter device code in browser, authorize application permissions
 Bad Example: ❌ Using invalid tokens directly, not following proper OAuth device flow, missing authorization steps
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ REPOSITORY STRUCTURE CLEANUP ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Lesson Learned: Repository maintenance requires periodic cleanup of outdated files and consolidation of configuration templates for clarity and consistency.
+Good Example: ✅ Removing fragmented .mdc files, creating consolidated .cursorrules template, maintaining clean directory structure, pushing changes to personal branch before pull request
+Bad Example: ❌ Leaving obsolete fragmented files, maintaining multiple inconsistent templates, working directly on main branch, skipping commit organization

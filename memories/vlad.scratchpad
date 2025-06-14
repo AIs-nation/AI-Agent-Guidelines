@@ -1,0 +1,95 @@
+Session: Initial guidelines reading
+Date: Current session
+Task: Read .cursorrules and ai-agent-rules.md
+
+Key Lessons Learned:
+1. MANDATORY research-first protocol - never attempt technical tasks without comprehensive research
+2. TMUX session protocol - always use tmux send-keys and capture-pane, never attach to sessions
+3. Git workflow - personal branches only, never push to main directly
+4. Identity protocol requires declaration at start of each session
+5. Silent execution - no explanatory text, let work speak through results
+6. Evidence-based completion - never claim completion without verification
+7. Quality over speed - comprehensive testing and validation required
+8. Continuous communication through Slack channels required
+9. Educational platform specific protocols for UX/UI design
+10. Security mindset fundamental in all development decisions
+
+Critical Protocols Memorized:
+- Research-first mandate is most important rule
+- TMUX for all terminal operations without attachment
+- Personal git branches with PR workflow
+- Evidence-based completion with systematic verification
+- Team communication hierarchy through Slack
+- Educational UX design principles for learning platforms
+- Comprehensive security engineering protocols
+
+Status: Guidelines successfully read and understood
+
+# Vlad's Learning Scratchpad
+
+## Session Lessons Learned
+
+### Research and Information Gathering
+- Always research online before answering technical questions
+- Use web search to verify current information and best practices
+- Data-driven responses with verified sources are essential
+- Never claim completion without verification through actual testing
+
+### TMUX Session Management
+- Use tmux for persistent terminal sessions
+- Commands: tmux new-session, tmux attach, tmux list-sessions
+- Essential for long-running processes and session continuity
+
+### Git Workflow Best Practices
+- MANDATORY personal branches with agent name
+- NEVER push to main directly - always create pull requests
+- Always ensure working on latest GitHub repositories
+- Make pull requests for all changes and require review before merging
+
+### Coursebox Platform Automation
+- Dynamic ref numbers (e[number]) change with each page load/screen change
+- Must use static identification methods: text content, visual patterns, position patterns, HTML attributes
+- Settings icon consistently positioned between "Unpublish" and "AI Tutor" buttons
+- Course editing workflow: settings->edit->modify->save pattern established
+
+### RTL Alignment Critical Learning
+- **CRITICAL**: For Hebrew RTL text alignment in Coursebox editor, must use the THIRD alignment button in the submenu
+- Alignment submenu structure: 4 buttons in top row, 2 in bottom row
+- Correct sequence: Click text editor -> Ctrl+A -> Click alignment button -> Click THIRD button in top row
+- Do NOT use left align, center align, or justify - only the third button provides correct RTL
+- This applies proper right-to-left alignment essential for Hebrew text readability
+
+### Element Identification Strategies
+- Text content identification most reliable (button text, placeholders, labels)
+- Visual patterns (icons like ⚙️ for settings, ≡ for alignment)
+- Position patterns (relative positioning between elements)
+- HTML attributes (type="password", name attributes)
+- Always have fallback strategies when primary identification fails
+
+### Communication Protocol
+- Execute tasks silently without explanatory text when requested
+- Let work speak through results only
+- Make independent decisions and implement best solutions
+- Never stop prematurely or claim completion without verification
+
+## Technical Implementation Notes
+
+### Coursebox Platform Specifics
+- Login: nir.yossef@easycyber.com / TheBestCourse837+
+- Course URL pattern: /#/courses/[ID]/about
+- Editor URL pattern: /#/courses/[ID]/activities/[ID]/course_view/edit
+- Settings icon always between "Unpublish" and "AI Tutor"
+- RTL alignment: Third button in alignment submenu (top row, third from left)
+
+### Automation Best Practices
+- Use static identification methods over dynamic ref numbers
+- Verify page state before attempting actions
+- Take snapshots when elements cannot be located
+- Process courses sequentially to avoid session issues
+- Apply consistent RTL formatting across all Hebrew course sections
+
+## Future Considerations
+- Document all successful automation patterns for reuse
+- Maintain updated element identification strategies
+- Test alignment on different content types (headings, paragraphs, lists)
+- Verify RTL alignment visually after applying to ensure proper Hebrew display
